@@ -17,22 +17,18 @@ module.exports = {
       "order",
       [
         {
-          user_id: "1",
-          driver_id: "1",
-          order_detail: [
-            {
-              product_id: 1,
-              quantity: 1
-            },
-            {
-              product_id: 2,
-              quantity: 2
-            },
-            {
-              product_id: 3,
-              quantity: 3
-            }
-          ]
+          user_id: 1,
+          status: "accepted",
+          driver_id: 2,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          user_id: 2,
+          status: "sending",
+          driver_id: 1,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ],
       {}

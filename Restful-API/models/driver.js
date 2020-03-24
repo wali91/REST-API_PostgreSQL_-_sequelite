@@ -9,7 +9,10 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Driver.associate = function(models) {
-    // associations can be defined here
+    Driver.hasMany(models.Order, {
+      foreignKey: "driver_id",
+      onDelete: "CASCADE"
+    });
   };
   return Driver;
 };

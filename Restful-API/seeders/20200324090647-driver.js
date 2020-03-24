@@ -17,16 +17,16 @@ module.exports = {
       "driver",
       [
         {
-          full_name: "jhone",
-          phone_number: "doe"
+          full_name: "jhonedoe",
+          phone_number: "08125674321",
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
         {
-          full_name: "full_name",
-          phone_number: "phone_number"
-        },
-        {
-          full_name: "full_name",
-          phone_number: "phone_number"
+          full_name: "jonathan tambunan",
+          phone_number: "08135679802",
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ],
       {}

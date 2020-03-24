@@ -1,9 +1,20 @@
-var express = require('express');
-var router = express.Router();
+module.exports = app => {
+  const customer = require("../controllers/customers");
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+  const router = require("express").Router();
 
-module.exports = router;
+  //create a new user & all customer
+  router
+    .route("/")
+    .post(customer.create)
+    .get(customer.findAll);
+
+  // get id update dan delete
+  router
+    .route("/:id")
+    .get(customer.findOne)
+    .put(customer.update)
+    .delete(customer.delete);
+
+  // app.route("/api/v1/customer", router);
+};

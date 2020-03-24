@@ -20,19 +20,17 @@ module.exports = {
           full_name: "johny",
           username: "doe",
           email: "john@doe.com",
-          phone_number: "0812345689"
+          phone_number: "0812345689",
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
         {
           full_name: "johny",
           username: "doe",
           email: "john@doe.com",
-          phone_number: "0812345689"
-        },
-        {
-          full_name: "johny",
-          username: "doe",
-          email: "john@doe.com",
-          phone_number: "0812345689"
+          phone_number: "0812345689",
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ],
       {}

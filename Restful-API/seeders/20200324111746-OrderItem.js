@@ -14,19 +14,17 @@ module.exports = {
     */
 
     return queryInterface.bulkInsert(
-      "product",
+      "OrderItems",
       [
         {
-          name: "apple",
-          price: 100000,
-          createdAt: new Date(),
-          updatedAt: new Date()
+          order_id: 1,
+          product_id: 2,
+          quantity: 1
         },
         {
-          name: "orange",
-          price: 50000,
-          createdAt: new Date(),
-          updatedAt: new Date()
+          order_id: 2,
+          product_id: 1,
+          quantity: 1
         }
       ],
       {}
