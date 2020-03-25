@@ -1,0 +1,12 @@
+POST http://localhost:5000/api/v1/customer
+Content-Type: application/json
+{
+    "data": {
+        "attributes": {
+            "full_name": "johny",
+            "username":"doe",
+            "email":"john@doe.com",
+            "phone_number":"0812345689",
+        }
+    }
+}

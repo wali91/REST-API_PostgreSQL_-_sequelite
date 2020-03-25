@@ -3,13 +3,14 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var CONFIG = require("./config/database");
 
-require("./routes/index");
-require("./routes/customers")(app);
-require("./routes/drivers")(app);
-require("./routes/orders")(app);
-require("./routes/products")(app);
-require("./routes/orderitems")(app);
+const indexRouter = require("./routes/api/v1/index");
+const customerRouter = require("./routes/api/v1/customers");
+const driverRouter = require("./routes/api/v1/drivers");
+const orderRouter = require("./routes/api/v1/orders");
+const productRouter = require("./routes/api/v1/products");
+const OrderItemRouter = require("./routes/api/v1/orderitems");
 
 var app = express();
 
@@ -22,19 +23,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// app.use("/", indexRouter);
-// app.use("/customer", customerRouter);
-// app.use("/order", orderRouter);
-// app.use("/driver", driverRouter);
-// app.use("/product", productRouter);
-// app.use("/orderitem", OrderItemRouter);
+app.use("/api/v1", indexRouter);
+app.use("/api/v1/customer", customerRouter);
+app.use("/api/v1/order", orderRouter);
+app.use("/api/v1/driver", driverRouter);
+app.use("/api/v1/product", productRouter);
+app.use("/api/v1/orderitem", OrderItemRouter);
 
-const db = require("./models");
+const db = require("./sequelite_database/models");
 db.sequelize.sync({ force: true });
-
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
-});
 
 module.exports = app;

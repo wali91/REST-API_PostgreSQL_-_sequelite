@@ -1,4 +1,4 @@
-const { Order, OrderItem } = require("../models");
+const { Order, OrderItem } = require("../sequelite_database/models");
 
 // Create and Save a new Order
 exports.create = (req, res) => {

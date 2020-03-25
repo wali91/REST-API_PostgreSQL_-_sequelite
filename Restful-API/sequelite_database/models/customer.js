@@ -4,9 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     "Customer",
     {
       full_name: DataTypes.STRING,
-      username: DataTypes.STRING,
-      email: DataTypes.STRING,
-      phone_number: DataTypes.INTEGER
+      username: { type: DataTypes.STRING, unique: true, allowNull: false },
+      email: { type: DataTypes.STRING, unique: true, allowNull: false },
+      phone_number: DataTypes.STRING
     },
     {}
   );

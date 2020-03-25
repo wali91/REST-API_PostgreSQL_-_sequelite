@@ -1,4 +1,4 @@
-const { Driver } = require("../models");
+const { Driver } = require("../sequelite_database/models");
 
 // Create and Save a new Driver
 exports.create = (req, res) => {

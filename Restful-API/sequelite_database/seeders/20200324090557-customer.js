@@ -17,15 +17,15 @@ module.exports = {
       "customer",
       [
         {
-          full_name: "johny",
+          full_name: "ruben-onsu",
           username: "doe",
-          email: "john@doe.com",
+          email: "ruben@onsu.com",
           phone_number: "0812345689",
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          full_name: "johny",
+          full_name: "johny-temberlek",
           username: "doe",
           email: "john@doe.com",
           phone_number: "0812345689",

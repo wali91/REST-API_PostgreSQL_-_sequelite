@@ -1,4 +1,4 @@
-const { Customer } = require("../models");
+const { Customer } = require("../sequelite_database/models");
 
 // Create and Save a new Customer
 exports.create = (req, res) => {
@@ -17,7 +17,6 @@ exports.create = (req, res) => {
     email: req.body.data.attributes.email,
     phone_number: req.body.data.attributes.phone_number
   };
-
   // Save Customer in the database
   Customer.create(customer)
     .then(data => {

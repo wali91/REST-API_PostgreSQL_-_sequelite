@@ -1,4 +1,4 @@
-const { Product } = require("../models");
+const { Product } = require("../sequelite_database/models");
 
 // Create and Save a new Product
 exports.create = (req, res) => {
